@@ -10,12 +10,12 @@ from userge.utils import progress
 
 @userge.on_cmd("web ?(.+?|) (anonfiles|transfer|filebin|anonymousfiles"
                "|megaupload|bayfiles|vshare|0x0|fileio)",
-               about=({
+               about={
                    'header': "upload files to web",
                    'usage': "{tr}web [site name]",
                    'types': [
                        'anonfiles', 'transfer', 'filebin', 'anonymousfiles',
-                       'megaupload', 'bayfiles', 'vshare', '0x0', 'fileio']})
+                       'megaupload', 'bayfiles', 'vshare', '0x0', 'fileio']}
 async def web(message: Message):
     await message.edit("`Processing ...`")
     input_str = message.matches[0].group(1)
