@@ -10,7 +10,7 @@ from userge.utils import progress
 
 @userge.on_cmd("web ?(.+?|) (anonfiles|transfer|filebin|anonymousfiles"
                "|megaupload|bayfiles|vshare|0x0|fileio)",
-               about={
+               about=({
                    'header': "upload files to web",
                    'usage': "{tr}web [site name]",
                    'types': [
