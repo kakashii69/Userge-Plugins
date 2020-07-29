@@ -528,6 +528,177 @@ async def DChaurasia2312(msg: Message):
     await _tweets(text, "DChaurasia2312")
     await _finalize(msg)
 
+@userge.on_cmd("elon", about={
+    'header': "Custom text Sticker of elon musk",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}elon [text | reply to text]"})
+async def elonmusk(msg: Message):
+    """ Fun Sticker of elonmusk Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```elonmusk Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```deepak is writing for You ð```")
+    await _tweets(text, "elonmusk")
+    await _finalize(msg)
+    
+@userge.on_cmd("spacex", about={
+    'header': "Custom text Sticker of SpaceX",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}spacex [text | reply to text]"})
+async def SpaceX(msg: Message):
+    """ Fun Sticker of SpaceX Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```SpaceX Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```deepak is writing for You ð```")
+    await _tweets(text, "SpaceX")
+    await _finalize(msg)
+    
+@userge.on_cmd("isro", about={
+    'header': "Custom text Sticker of isro",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}isro [text | reply to text]"})
+async def isro(msg: Message):
+    """ Fun Sticker of isro Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```isro Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```isro is writing for You ð```")
+    await _tweets(text, "isro")
+    await _finalize(msg)
+    
+@userge.on_cmd("gandhi", about={
+    'header': "Custom text Sticker of gandhi",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}gandhi [text | reply to text]"})
+async def gandhi(msg: Message):
+    """ Fun Sticker of gandhi Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```gandhi Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```gandhi is writing for You ð```")
+    await _tweets(text, "gandhi")
+    await _finalize(msg)
+    
+@userge.on_cmd("mia", about={
+    'header': "Custom text Sticker of mia",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}mia [text | reply to text]"})
+async def miakhalifa(msg: Message):
+    """ Fun Sticker of miakhalifa Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```miakhalifa Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```miakhalifa is writing for You ð```")
+    await _tweets(text, "miakhalifa")
+    await _finalize(msg)
+    
+@userge.on_cmd("johnny", about={
+    'header': "Custom text Sticker of johnny",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}johnny [text | reply to text]"})
+async def JohnnnyyySins(msg: Message):
+    """ Fun Sticker of johnny Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```johnny Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```johnny is writing for You ð```")
+    await _tweets(text, "JohnnnyyySins")
+    await _finalize(msg)
+    
+@userge.on_cmd("krk", about={
+    'header': "Custom text Sticker of krk",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}krk [text | reply to text]"})
+async def kamaalrkhan(msg: Message):
+    """ Fun Sticker of krk Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```krk Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```krk is writing for You ð```")
+    await _tweets(text, "kamaalrkhan")
+    await _finalize(msg)
+    
+@userge.on_cmd("vivek", about={
+    'header': "Custom text Sticker of vivek",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}vivek [text | reply to text]"})
+async def vivekoberoi(msg: Message):
+    """ Fun Sticker of vivek Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```vivek Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```vivek is writing for You ð```")
+    await _tweets(text, "vivekoberoi")
+    await _finalize(msg)
+    
+@userge.on_cmd("boring", about={
+    'header': "Custom text Sticker of boringcompany",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}boring [text | reply to text]"})
+async def boringcompany(msg: Message):
+    """ Fun Sticker of boringcompany Tweet """
+    replied = msg.reply_to_message
+    if replied and not msg.filtered_input_str:
+        text = replied.text
+    else:
+        text = msg.filtered_input_str
+    if not text:
+        await msg.err("```boringcompany Need some text to Write ð```", del_in=3)
+        return
+    await msg.edit("```boringcompany is writing for You ð```")
+    await _tweets(text, "boringcompany")
+    await _finalize(msg)
+    
 @userge.on_cmd("tweet", about={
     'header': "Tweet With Custom text Sticker",
     'flags': {
