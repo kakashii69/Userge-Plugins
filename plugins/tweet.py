@@ -1102,72 +1102,60 @@ async def stevejobsceo(msg: Message):
     'header': "Tweet With Custom text Sticker",
     'flags': {
         '-s': "To get tweet in Sticker"},
-    'usage': "{tr}tweet Text - Username\n"
+    'usage': "{tr}tweet Text , Username\n"
              "{tr}tweet Text\n"
              "{tr}tweet [Text | with reply to User]"})
 async def tweet(msg: Message):
     """ Tweet with your own Username """
     replied = msg.reply_to_message
-    args = msg.input_str
-    if args:
-        text = args
-    elif replied:
-        text = args if args else replied.text
-    else:
-        await msg.err("```Give Me some text to Tweet ð```", del_in=3)
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("Give Me some text to Tweet 😕")
         return
-    await msg.edit("```Creating a Tweet Sticker ð```")
-    if replied:
-        u_id = replied.from_user.id
-    else:
-        u_id = msg.from_user.id
-    u_name = (await msg.client.get_users(u_id)).username
-    if u_name:
-        User_name = u_name
-    else:
-        User_name = (await msg.client.get_users(u_id)).first_name
-    msg_id = replied.message_id if replied else None
-    if '-' in msg.input_str:
-        text1, text2 = msg.input_str.split('-')
-        if not text2:
-            await msg.err(
-                "```Give me Your Custom Username for Tweet... ð```"
-            )
-            return
-        Text1 = deEmojify(text1.strip())
-        Text2 = deEmojify(text2.strip())
-        await tweets(Text1, Text2)
-    else:
-        Text_1 = deEmojify(text)
-        Text_2 = deEmojify(User_name)
-        await tweets(Text_1, Text_2)
-    await msg.delete()
-    if '-s' in msg.flags:
-        await msg.client.send_sticker(
-            msg.chat.id,
-            Converted_stikr,
-            reply_to_message_id=msg_id)
-    else:
-        await msg.client.send_photo(
-            msg.chat.id,
-            Converted_img,
-            reply_to_message_id=msg_id)
-    for files in (Converted_img, Converted_stikr):
-        if files and os.path.exists(files):
-            os.remove(files)
+    username = ''
+    if ',' in text:
+        text, username = text.split(',')
+    if not username:
+        if replied:
+            username = replied.from_user.username or replied.from_user.first_name
+        else:
+            username = msg.from_user.username or msg.from_user.first_name
+    await msg.edit("```Creating a Tweet Sticker 😏```")
+    await _tweets(msg, text.strip(), username.strip())
 
-async def tweets(text1, text2):
-    k = f"https://nekobot.xyz/api/imagegen?type=tweet&text={text1}&username={text2}"
-    r = requests.get(k).json()
-    TWEETS = r.get("message")
-    tweeturl = url(TWEETS)
-    if not tweeturl:
-        return "```Invalid Syntax, Exiting...```"
-    file = Config.DOWN_PATH + "temp.png"
-    with open(file, "wb") as TWEET:
-        TWEET.write(requests.get(TWEETS).content)
-    img = Image.open(file)
-    img.save(Converted_img)
-    img.save(Converted_stikr)
-    os.remove(file)
-    return Converted_img, Converted_stikr
+
+def _deEmojify(inputString: str) -> str:
+    """Remove emojis and other non-safe characters from string"""
+    return re.sub(EMOJI_PATTERN, '', inputString)
+
+
+async def _tweets(msg: Message, text: str, username: str = '', type_: str = "tweet") -> None:
+    api_url = f"https://nekobot.xyz/api/imagegen?type={type_}&text={_deEmojify(text)}"
+    if username:
+        api_url += f"&username={_deEmojify(username)}"
+    res = requests.get(api_url).json()
+    tweets_ = res.get("message")
+    if not url(tweets_):
+        await msg.err("Invalid Syntax, Exiting...")
+        return
+    tmp_file = Config.DOWN_PATH + "temp.png"
+    with open(tmp_file, "wb") as t_f:
+        t_f.write(requests.get(tweets_).content)
+    img = Image.open(tmp_file)
+    img.save(CONVERTED_IMG)
+    img.save(CONVERTED_STIKR)
+    await msg.delete()
+    msg_id = msg.reply_to_message.message_id if msg.reply_to_message else None
+    if '-s' in msg.flags:
+        await msg.client.send_sticker(chat_id=msg.chat.id,
+                                      sticker=CONVERTED_STIKR,
+                                      reply_to_message_id=msg_id)
+    else:
+        await msg.client.send_photo(chat_id=msg.chat.id,
+                                    photo=CONVERTED_IMG,
+                                    reply_to_message_id=msg_id)
+    os.remove(tmp_file)
+    os.remove(CONVERTED_IMG)
+    os.remove(CONVERTED_STIKR)
