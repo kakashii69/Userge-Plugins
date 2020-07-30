@@ -823,12 +823,11 @@ async def rajinikanth(msg: Message):
 async def tweet(msg: Message):
     """ Tweet with your own Username """
     replied = msg.reply_to_message
-    if replied and not msg.filtered_input_str:
+    text = msg.filtered_input_str
+    if replied and not text:
         text = replied.text
-    else:
-        text = msg.filtered_input_str
     if not text:
-        await msg.err("```Give Me some text to Tweet ð```", del_in=3)
+        await msg.err("Give Me some text to Tweet 😕")
         return
     username = ''
     if ',' in text:
@@ -838,9 +837,8 @@ async def tweet(msg: Message):
             username = replied.from_user.username or replied.from_user.first_name
         else:
             username = msg.from_user.username or msg.from_user.first_name
-    await msg.edit("```Creating a Tweet Sticker ð```")
-    await _tweets(text.strip(), username.strip())
-    await _finalize(msg)
+    await msg.edit("```Creating a Tweet Sticker 😏```")
+    await _tweets(msg, text.strip(), username.strip())
 
 
 def _deEmojify(inputString: str) -> str:
@@ -848,24 +846,21 @@ def _deEmojify(inputString: str) -> str:
     return re.sub(EMOJI_PATTERN, '', inputString)
 
 
-async def _tweets(text: str, username: str = '', type_: str = "tweet") -> None:
+async def _tweets(msg: Message, text: str, username: str = '', type_: str = "tweet") -> None:
     api_url = f"https://nekobot.xyz/api/imagegen?type={type_}&text={_deEmojify(text)}"
     if username:
         api_url += f"&username={_deEmojify(username)}"
     res = requests.get(api_url).json()
     tweets_ = res.get("message")
     if not url(tweets_):
-        return "```Invalid Syntax, Exiting...```"
+        await msg.err("Invalid Syntax, Exiting...")
+        return
     tmp_file = Config.DOWN_PATH + "temp.png"
     with open(tmp_file, "wb") as t_f:
         t_f.write(requests.get(tweets_).content)
     img = Image.open(tmp_file)
     img.save(CONVERTED_IMG)
     img.save(CONVERTED_STIKR)
-    os.remove(tmp_file)
-
-
-async def _finalize(msg: Message) -> None:
     await msg.delete()
     msg_id = msg.reply_to_message.message_id if msg.reply_to_message else None
     if '-s' in msg.flags:
@@ -876,6 +871,6 @@ async def _finalize(msg: Message) -> None:
         await msg.client.send_photo(chat_id=msg.chat.id,
                                     photo=CONVERTED_IMG,
                                     reply_to_message_id=msg_id)
-    for files in (CONVERTED_IMG, CONVERTED_STIKR):
-        if files and os.path.exists(files):
-            os.remove(files)
+    os.remove(tmp_file)
+    os.remove(CONVERTED_IMG)
+    os.remove(CONVERTED_STIKR)
