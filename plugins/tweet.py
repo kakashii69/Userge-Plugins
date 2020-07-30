@@ -45,7 +45,7 @@ async def trump_tweet(msg: Message):
         await msg.err("```Trump Need some Text for Tweet ð```", del_in=3)
         return
     await msg.edit("```Requesting trump to tweet... ð```")
-    await _tweets(text, type_="trumptweet")
+    await _tweets(msg, text, type_="trumptweet")
     
 
 @userge.on_cmd("modi", about={
@@ -63,7 +63,7 @@ async def modi_tweet(msg: Message):
         await msg.err("```Modi Need some Text for Tweet ð```", del_in=3)
         return
     await msg.edit("```Requesting Modi to tweet... ð```")
-    await _tweets(text, "narendramodi")
+    await _tweets(msg, text, "narendramodi")
     
 
 @userge.on_cmd("cmm", about={
@@ -81,7 +81,7 @@ async def Change_My_Mind(msg: Message):
         await msg.err("```Need some Text to Change My Mind ð```", del_in=3)
         return
     await msg.edit("```Writing Banner of Change My Mind ð```")
-    await _tweets(text, type_="changemymind")
+    await _tweets(msg, text, type_="changemymind")
     
 
 @userge.on_cmd("kanna", about={
@@ -99,7 +99,7 @@ async def kanna(msg: Message):
         await msg.err("```Kanna Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Kanna is writing for You ð```")
-    await _tweets(text, type_="kannagen")
+    await _tweets(msg, text, type_="kannagen")
     
 
 @userge.on_cmd("salmon", about={
@@ -117,7 +117,7 @@ async def BeingSalmanKhan(msg: Message):
         await msg.err("```Salmon Bhai Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Salmon Bhai is writing for You ð```")
-    await _tweets(text, "BeingSalmanKhan")
+    await _tweets(msg, text, "BeingSalmanKhan")
     
 @userge.on_cmd("srk", about={
     'header': "Custom text Sticker of SRK",
@@ -134,7 +134,7 @@ async def iamsrk(msg: Message):
         await msg.err("```SRK Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```SRK is writing for You ð```")
-    await _tweets(text, "iamsrk")
+    await _tweets(msg, text, "iamsrk")
     
 @userge.on_cmd("ab", about={
     'header': "Custom text Sticker of Amitabh",
@@ -151,7 +151,7 @@ async def SrBachchan(msg: Message):
         await msg.err("```SrBachchan Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```SrBachchan is writing for You ð```")
-    await _tweets(text, "SrBachchan")
+    await _tweets(msg, text, "SrBachchan")
     
 @userge.on_cmd("ambani", about={
     'header': "Custom text Sticker of Ambani",
@@ -168,7 +168,7 @@ async def Asliambani(msg: Message):
         await msg.err("```ambani Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```ambani is writing for You ð```")
-    await _tweets(text, "Asliambani")
+    await _tweets(msg, text, "Asliambani")
     
 @userge.on_cmd("jio", about={
     'header': "Custom text Sticker of Jio",
@@ -185,7 +185,7 @@ async def reliancejio(msg: Message):
         await msg.err("```Jio Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Jio is writing for You ð```")
-    await _tweets(text, "reliancejio")
+    await _tweets(msg, text, "reliancejio")
     
 @userge.on_cmd("ash", about={
     'header': "Custom text Sticker of Ash",
@@ -202,7 +202,7 @@ async def AshwariyaRai(msg: Message):
         await msg.err("```Ash Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Ash is writing for You ð```")
-    await _tweets(text, "AshwariyaRai")
+    await _tweets(msg, text, "AshwariyaRai")
     
 
 @userge.on_cmd("rekha", about={
@@ -220,7 +220,7 @@ async def TheRekhaFanclub(msg: Message):
         await msg.err("```Rekha Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Rekha is writing for You ð```")
-    await _tweets(text, "TheRekhaFanclub")
+    await _tweets(msg, text, "TheRekhaFanclub")
     
 @userge.on_cmd("telegram", about={
     'header': "Custom text Sticker of Telegram",
@@ -237,7 +237,7 @@ async def telegram(msg: Message):
         await msg.err("```Telegram Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Telegram is writing for You ð```")
-    await _tweets(text, "telegram")
+    await _tweets(msg, text, "telegram")
     
 @userge.on_cmd("whatsapp", about={
     'header': "Custom text Sticker of Whatsapp",
@@ -254,7 +254,7 @@ async def WhatsApp(msg: Message):
         await msg.err("```Whatsapp Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Whatsapp is writing for You ð```")
-    await _tweets(text, "WhatsApp")
+    await _tweets(msg, text, "WhatsApp")
     
 @userge.on_cmd("ananya", about={
     'header': "Custom text Sticker of Ananya",
@@ -271,7 +271,7 @@ async def ananyapandayy(msg: Message):
         await msg.err("```Ananya Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Ananya is writing for You ð```")
-    await _tweets(text, "ananyapandayy")
+    await _tweets(msg, text, "ananyapandayy")
     
 @userge.on_cmd("sonakshi", about={
     'header': "Custom text Sticker of Sonakshi",
@@ -288,7 +288,7 @@ async def Aslisonagold(msg: Message):
         await msg.err("```Sonakshi Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Sonakshi is writing for You ð```")
-    await _tweets(text, "Aslisonagold")
+    await _tweets(msg, text, "Aslisonagold")
     
 @userge.on_cmd("sonam", about={
     'header': "Custom text Sticker of Sonam",
@@ -305,7 +305,7 @@ async def sonamakapoor(msg: Message):
         await msg.err("```Sonam Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Sonam is writing for You ð```")
-    await _tweets(text, "sonamakapoor")
+    await _tweets(msg, text, "sonamakapoor")
     
 @userge.on_cmd("johar", about={
     'header': "Custom text Sticker of Karan Johar",
@@ -322,7 +322,7 @@ async def karanjohar(msg: Message):
         await msg.err("```Karan Johar Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Karan Johar is writing for You ð```")
-    await _tweets(text, "karanjohar")
+    await _tweets(msg, text, "karanjohar")
 
 @userge.on_cmd("yogi", about={
     'header': "Custom text Sticker of yogi ji",
@@ -339,7 +339,7 @@ async def myogiadityanath(msg: Message):
         await msg.err("```Yogi Ji Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Yogi Ji is writing for You ð```")
-    await _tweets(text, "myogiadityanath")
+    await _tweets(msg, text, "myogiadityanath")
     
 @userge.on_cmd("ramdev", about={
     'header': "Custom text Sticker of Baba Ramdev",
@@ -356,7 +356,7 @@ async def yogrishiramdev(msg: Message):
         await msg.err("```Ramdev Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Ramdev is writing for You ð```")
-    await _tweets(text, "yogrishiramdev")
+    await _tweets(msg, text, "yogrishiramdev")
     
 @userge.on_cmd("sudhir", about={
     'header': "Custom text Sticker of Sudhir",
@@ -373,7 +373,7 @@ async def sudhirchaudhary(msg: Message):
         await msg.err("```Sudhir Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Sudhir is writing for You ð```")
-    await _tweets(text, "sudhirchaudhary")
+    await _tweets(msg, text, "sudhirchaudhary")
     
 @userge.on_cmd("arnab", about={
     'header': "Custom text Sticker of Arnab",
@@ -390,7 +390,7 @@ async def ArnabGoswamiRTV(msg: Message):
         await msg.err("```Arnab Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Arnab is writing for You ð```")
-    await _tweets(text, "ArnabGoswamiRTV")
+    await _tweets(msg, text, "ArnabGoswamiRTV")
     
 @userge.on_cmd("rahul", about={
     'header': "Custom text Sticker of rahul",
@@ -407,7 +407,7 @@ async def RahulGandhi(msg: Message):
         await msg.err("```Rahul Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Rahul is writing for You ð```")
-    await _tweets(text, "RahulGandhi")
+    await _tweets(msg, text, "RahulGandhi")
     
 @userge.on_cmd("amitshah", about={
     'header': "Custom text Sticker of Amitshah",
@@ -424,7 +424,7 @@ async def iamsrk(msg: Message):
         await msg.err("```Amit Shah Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Amit Shah is writing for You ð```")
-    await _tweets(text, "AmitShah")
+    await _tweets(msg, text, "AmitShah")
     
 @userge.on_cmd("rubika", about={
     'header': "Custom text Sticker of rubika",
@@ -441,7 +441,7 @@ async def RubikaLiyaquat(msg: Message):
         await msg.err("```rubika Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```rubika is writing for You ð```")
-    await _tweets(text, "RubikaLiyaquat")
+    await _tweets(msg, text, "RubikaLiyaquat")
     
 @userge.on_cmd("amish", about={
     'header': "Custom text Sticker of Amish Devgan",
@@ -458,7 +458,7 @@ async def AMISHDEVGAN(msg: Message):
         await msg.err("```Amish Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```Amish is writing for You ð```")
-    await _tweets(text, "AMISHDEVGAN")
+    await _tweets(msg, text, "AMISHDEVGAN")
     
 @userge.on_cmd("deepak", about={
     'header': "Custom text Sticker of deepak",
@@ -475,7 +475,7 @@ async def DChaurasia2312(msg: Message):
         await msg.err("```deepak Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```deepak is writing for You ð```")
-    await _tweets(text, "DChaurasia2312")
+    await _tweets(msg, text, "DChaurasia2312")
     
 @userge.on_cmd("elon", about={
     'header': "Custom text Sticker of elon musk",
@@ -492,7 +492,7 @@ async def elonmusk(msg: Message):
         await msg.err("```elonmusk Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```deepak is writing for You ð```")
-    await _tweets(text, "elonmusk")
+    await _tweets(msg, text, "elonmusk")
         
 @userge.on_cmd("spacex", about={
     'header': "Custom text Sticker of SpaceX",
@@ -509,7 +509,7 @@ async def SpaceX(msg: Message):
         await msg.err("```SpaceX Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```deepak is writing for You ð```")
-    await _tweets(text, "SpaceX")
+    await _tweets(msg, text, "SpaceX")
         
 @userge.on_cmd("isro", about={
     'header': "Custom text Sticker of isro",
@@ -526,7 +526,7 @@ async def isro(msg: Message):
         await msg.err("```isro Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```isro is writing for You ð```")
-    await _tweets(text, "isro")
+    await _tweets(msg, text, "isro")
         
 @userge.on_cmd("gandhi", about={
     'header': "Custom text Sticker of gandhi",
@@ -543,7 +543,7 @@ async def gandhi(msg: Message):
         await msg.err("```gandhi Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```gandhi is writing for You ð```")
-    await _tweets(text, "gandhi")
+    await _tweets(msg, text, "gandhi")
         
 @userge.on_cmd("mia", about={
     'header': "Custom text Sticker of mia",
@@ -560,7 +560,7 @@ async def miakhalifa(msg: Message):
         await msg.err("```miakhalifa Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```miakhalifa is writing for You ð```")
-    await _tweets(text, "miakhalifa")
+    await _tweets(msg, text, "miakhalifa")
         
 @userge.on_cmd("johnny", about={
     'header': "Custom text Sticker of johnny",
@@ -577,7 +577,7 @@ async def JohnnnyyySins(msg: Message):
         await msg.err("```johnny Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```johnny is writing for You ð```")
-    await _tweets(text, "JohnnnyyySins")
+    await _tweets(msg, text, "JohnnnyyySins")
         
 @userge.on_cmd("krk", about={
     'header': "Custom text Sticker of krk",
@@ -594,7 +594,7 @@ async def kamaalrkhan(msg: Message):
         await msg.err("```krk Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```krk is writing for You ð```")
-    await _tweets(text, "kamaalrkhan")
+    await _tweets(msg, text, "kamaalrkhan")
         
 @userge.on_cmd("vivek", about={
     'header': "Custom text Sticker of vivek",
@@ -611,7 +611,7 @@ async def vivekoberoi(msg: Message):
         await msg.err("```vivek Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```vivek is writing for You ð```")
-    await _tweets(text, "vivekoberoi")
+    await _tweets(msg, text, "vivekoberoi")
         
 @userge.on_cmd("boring", about={
     'header': "Custom text Sticker of boringcompany",
@@ -628,7 +628,7 @@ async def boringcompany(msg: Message):
         await msg.err("```boringcompany Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```boringcompany is writing for You ð```")
-    await _tweets(text, "boringcompany")
+    await _tweets(msg, text, "boringcompany")
         
 @userge.on_cmd("sanjay", about={
     'header': "Custom text Sticker of sanjay",
@@ -645,7 +645,7 @@ async def duttsanjay(msg: Message):
         await msg.err("```sanjay Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```sanjay is writing for You ð```")
-    await _tweets(text, "duttsanjay")
+    await _tweets(msg, text, "duttsanjay")
         
 @userge.on_cmd("ajay", about={
     'header': "Custom text Sticker of ajay",
@@ -662,7 +662,7 @@ async def ajaydevgn(msg: Message):
         await msg.err("```ajay Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```ajay is writing for You ð```")
-    await _tweets(text, "ajaydevgn")
+    await _tweets(msg, text, "ajaydevgn")
         
 @userge.on_cmd("tesla", about={
     'header': "Custom text Sticker of tesla",
@@ -679,7 +679,7 @@ async def tesla(msg: Message):
         await msg.err("```tesla Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```tesla is writing for You ð```")
-    await _tweets(text, "tesla")
+    await _tweets(msg, text, "tesla")
         
 @userge.on_cmd("albert", about={
     'header': "Custom text Sticker of albert",
@@ -696,7 +696,7 @@ async def AlbertEinstein(msg: Message):
         await msg.err("```albert Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```albert is writing for You ð```")
-    await _tweets(text, "AlbertEinstein")
+    await _tweets(msg, text, "AlbertEinstein")
         
 @userge.on_cmd("bear", about={
     'header': "Custom text Sticker of BearGrylls",
@@ -713,7 +713,7 @@ async def BearGrylls(msg: Message):
         await msg.err("```BearGrylls Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```BearGrylls is writing for You ð```")
-    await _tweets(text, "BearGrylls")
+    await _tweets(msg, text, "BearGrylls")
         
 @userge.on_cmd("rajni", about={
     'header': "Custom text Sticker of rajinikanth",
@@ -730,7 +730,7 @@ async def rajinikanth(msg: Message):
         await msg.err("```rajinikanth Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```rajinikanth is writing for You ð```")
-    await _tweets(text, "rajinikanth")
+    await _tweets(msg, text, "rajinikanth")
         
 @userge.on_cmd("apple", about={
     'header': "Custom text Sticker of apple",
@@ -747,7 +747,7 @@ async def apple(msg: Message):
         await msg.err("```apple Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```apple is writing for You ð```")
-    await _tweets(text, "apple")
+    await _tweets(msg, text, "apple")
         
 @userge.on_cmd("durov", about={
     'header': "Custom text Sticker of durov",
@@ -764,7 +764,7 @@ async def durov(msg: Message):
         await msg.err("```durov Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```durov is writing for You ð```")
-    await _tweets(text, "durov")
+    await _tweets(msg, text, "durov")
         
 @userge.on_cmd("fb", about={
     'header': "Custom text Sticker of facebook",
@@ -781,7 +781,7 @@ async def facebook(msg: Message):
         await msg.err("```facebook Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```facebook is writing for You ð```")
-    await _tweets(text, "facebook")
+    await _tweets(msg, text, "facebook")
         
 @userge.on_cmd("bjp", about={
     'header': "Custom text Sticker of bjp",
@@ -798,7 +798,7 @@ async def bjp4india(msg: Message):
         await msg.err("```bjp Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```bjp is writing for You ð```")
-    await _tweets(text, "bjp4india")
+    await _tweets(msg, text, "bjp4india")
         
 @userge.on_cmd("sambit", about={
     'header': "Custom text Sticker of sambit",
@@ -815,7 +815,7 @@ async def sambitswaraj(msg: Message):
         await msg.err("```sambit Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```sambit is writing for You ð```")
-    await _tweets(text, "sambitswaraj")
+    await _tweets(msg, text, "sambitswaraj")
         
 @userge.on_cmd("nirmala", about={
     'header': "Custom text Sticker of nirmala",
@@ -832,7 +832,7 @@ async def nsitharaman(msg: Message):
         await msg.err("```nirmala Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```nirmala is writing for You ð```")
-    await _tweets(text, "nsitharaman")
+    await _tweets(msg, text, "nsitharaman")
         
 @userge.on_cmd("youtube", about={
     'header': "Custom text Sticker of youtube",
@@ -849,7 +849,7 @@ async def youtube(msg: Message):
         await msg.err("```youtube Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```youtube is writing for You ð```")
-    await _tweets(text, "youtube")
+    await _tweets(msg, text, "youtube")
         
 @userge.on_cmd("tiktok", about={
     'header': "Custom text Sticker of tiktok",
@@ -866,7 +866,7 @@ async def tiktok_in(msg: Message):
         await msg.err("```tiktok Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```tiktok is writing for You ð```")
-    await _tweets(text, "tiktok_in")
+    await _tweets(msg, text, "tiktok_in")
         
 @userge.on_cmd("google", about={
     'header': "Custom text Sticker of google",
@@ -883,7 +883,7 @@ async def google(msg: Message):
         await msg.err("```google Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```google is writing for You ð```")
-    await _tweets(text, "google")
+    await _tweets(msg, text, "google")
         
 @userge.on_cmd("kangana", about={
     'header': "Custom text Sticker of kangana",
@@ -900,7 +900,7 @@ async def thekangana(msg: Message):
         await msg.err("```kangana Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```kangana is writing for You ð```")
-    await _tweets(text, "thekangana")
+    await _tweets(msg, text, "thekangana")
         
 @userge.on_cmd("hrithik", about={
     'header': "Custom text Sticker of hrithik",
@@ -917,7 +917,7 @@ async def ihrithik(msg: Message):
         await msg.err("```hrithik Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```hrithik is writing for You ð```")
-    await _tweets(text, "ihrithik")
+    await _tweets(msg, text, "ihrithik")
         
 @userge.on_cmd("nirmal", about={
     'header': "Custom text Sticker of nirmalbabaji",
@@ -934,7 +934,7 @@ async def nirmalbabaji(msg: Message):
         await msg.err("```nirmalbabaji Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```nirmalbabaji is writing for You ð```")
-    await _tweets(text, "nirmalbabaji")
+    await _tweets(msg, text, "nirmalbabaji")
         
 @userge.on_cmd("ramrahim", about={
     'header': "Custom text Sticker of ram rahim singh",
@@ -951,7 +951,7 @@ async def gurmeetHoneyS(msg: Message):
         await msg.err("```ram rahim singh Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```ram rahim singh is writing for You ð```")
-    await _tweets(text, "gurmeetHoneyS")
+    await _tweets(msg, text, "gurmeetHoneyS")
         
 @userge.on_cmd("cook", about={
     'header': "Custom text Sticker of tim cook",
@@ -968,7 +968,7 @@ async def tim_cook(msg: Message):
         await msg.err("```tim coom Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```tim cook is writing for You ð```")
-    await _tweets(text, "tim_cook")
+    await _tweets(msg, text, "tim_cook")
         
 @userge.on_cmd("steve", about={
     'header': "Custom text Sticker of steve jobs",
@@ -985,7 +985,7 @@ async def stevejobsceo(msg: Message):
         await msg.err("```steve Need some text to Write ð```", del_in=3)
         return
     await msg.edit("```steve is writing for You ð```")
-    await _tweets(text, "stevejobsceo")
+    await _tweets(msg, text, "stevejobsceo")
             
 @userge.on_cmd("tweet", about={
     'header': "Tweet With Custom text Sticker",
