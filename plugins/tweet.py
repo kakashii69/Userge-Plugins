@@ -987,6 +987,40 @@ async def stevejobsceo(msg: Message):
     await msg.edit("```steve is writing for You ð```")
     await _tweets(msg, text, "stevejobsceo")
             
+@userge.on_cmd("starbucks", about={
+    'header': "Custom text Sticker of Starbucks",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}starbucks [text | reply to text]"})
+async def starbucks(msg: Message):
+    """ Fun Sticker of starbucks Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```starbucks Need some text to Write ð```")
+        return
+    await msg.edit("```starbucks is writing for You ð```")
+    await _tweets(msg, text, "starbucks")
+    
+@userge.on_cmd("android", about={
+    'header': "Custom text Sticker of Android jobs",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}android [text | reply to text]"})
+async def Android(msg: Message):
+    """ Fun Sticker of Android Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```Android Need some text to Write ð```")
+        return
+    await msg.edit("```Android is writing for You ð```")
+    await _tweets(msg, text, "Android")
+                        
 @userge.on_cmd("tweet", about={
     'header': "Tweet With Custom text Sticker",
     'flags': {
