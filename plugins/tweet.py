@@ -42,7 +42,7 @@ async def trump_tweet(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Trump Need some Text for Tweet ð```", del_in=3)
+        await msg.err("```Trump Need some Text for Tweet ð```")
         return
     await msg.edit("```Requesting trump to tweet... ð```")
     await _tweets(msg, text, type_="trumptweet")
@@ -60,7 +60,7 @@ async def modi_tweet(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Modi Need some Text for Tweet ð```", del_in=3)
+        await msg.err("```Modi Need some Text for Tweet ð```")
         return
     await msg.edit("```Requesting Modi to tweet... ð```")
     await _tweets(msg, text, "narendramodi")
@@ -78,7 +78,7 @@ async def Change_My_Mind(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Need some Text to Change My Mind ð```", del_in=3)
+        await msg.err("```Need some Text to Change My Mind ð```")
         return
     await msg.edit("```Writing Banner of Change My Mind ð```")
     await _tweets(msg, text, type_="changemymind")
@@ -96,7 +96,7 @@ async def kanna(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Kanna Need some text to Write ð```", del_in=3)
+        await msg.err("```Kanna Need some text to Write ð```")
         return
     await msg.edit("```Kanna is writing for You ð```")
     await _tweets(msg, text, type_="kannagen")
@@ -114,7 +114,7 @@ async def BeingSalmanKhan(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Salmon Bhai Need some text to Write ð```", del_in=3)
+        await msg.err("```Salmon Bhai Need some text to Write ð```")
         return
     await msg.edit("```Salmon Bhai is writing for You ð```")
     await _tweets(msg, text, "BeingSalmanKhan")
@@ -131,7 +131,7 @@ async def iamsrk(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```SRK Need some text to Write ð```", del_in=3)
+        await msg.err("```SRK Need some text to Write ð```")
         return
     await msg.edit("```SRK is writing for You ð```")
     await _tweets(msg, text, "iamsrk")
@@ -148,7 +148,7 @@ async def SrBachchan(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```SrBachchan Need some text to Write ð```", del_in=3)
+        await msg.err("```SrBachchan Need some text to Write ð```")
         return
     await msg.edit("```SrBachchan is writing for You ð```")
     await _tweets(msg, text, "SrBachchan")
@@ -165,7 +165,7 @@ async def Asliambani(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```ambani Need some text to Write ð```", del_in=3)
+        await msg.err("```ambani Need some text to Write ð```")
         return
     await msg.edit("```ambani is writing for You ð```")
     await _tweets(msg, text, "Asliambani")
@@ -182,7 +182,7 @@ async def reliancejio(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Jio Need some text to Write ð```", del_in=3)
+        await msg.err("```Jio Need some text to Write ð```")
         return
     await msg.edit("```Jio is writing for You ð```")
     await _tweets(msg, text, "reliancejio")
@@ -199,7 +199,7 @@ async def AshwariyaRai(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Ash Need some text to Write ð```", del_in=3)
+        await msg.err("```Ash Need some text to Write ð```")
         return
     await msg.edit("```Ash is writing for You ð```")
     await _tweets(msg, text, "AshwariyaRai")
@@ -217,7 +217,7 @@ async def TheRekhaFanclub(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Rekha Need some text to Write ð```", del_in=3)
+        await msg.err("```Rekha Need some text to Write ð```")
         return
     await msg.edit("```Rekha is writing for You ð```")
     await _tweets(msg, text, "TheRekhaFanclub")
@@ -234,7 +234,7 @@ async def telegram(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Telegram Need some text to Write ð```", del_in=3)
+        await msg.err("```Telegram Need some text to Write ð```")
         return
     await msg.edit("```Telegram is writing for You ð```")
     await _tweets(msg, text, "telegram")
@@ -251,7 +251,7 @@ async def WhatsApp(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Whatsapp Need some text to Write ð```", del_in=3)
+        await msg.err("```Whatsapp Need some text to Write ð```")
         return
     await msg.edit("```Whatsapp is writing for You ð```")
     await _tweets(msg, text, "WhatsApp")
@@ -268,7 +268,7 @@ async def ananyapandayy(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Ananya Need some text to Write ð```", del_in=3)
+        await msg.err("```Ananya Need some text to Write ð```")
         return
     await msg.edit("```Ananya is writing for You ð```")
     await _tweets(msg, text, "ananyapandayy")
@@ -285,7 +285,7 @@ async def Aslisonagold(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Sonakshi Need some text to Write ð```", del_in=3)
+        await msg.err("```Sonakshi Need some text to Write ð```")
         return
     await msg.edit("```Sonakshi is writing for You ð```")
     await _tweets(msg, text, "Aslisonagold")
@@ -302,7 +302,7 @@ async def sonamakapoor(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Sonam Need some text to Write ð```", del_in=3)
+        await msg.err("```Sonam Need some text to Write ð```")
         return
     await msg.edit("```Sonam is writing for You ð```")
     await _tweets(msg, text, "sonamakapoor")
@@ -319,7 +319,7 @@ async def karanjohar(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Karan Johar Need some text to Write ð```", del_in=3)
+        await msg.err("```Karan Johar Need some text to Write ð```")
         return
     await msg.edit("```Karan Johar is writing for You ð```")
     await _tweets(msg, text, "karanjohar")
@@ -336,7 +336,7 @@ async def myogiadityanath(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Yogi Ji Need some text to Write ð```", del_in=3)
+        await msg.err("```Yogi Ji Need some text to Write ð```")
         return
     await msg.edit("```Yogi Ji is writing for You ð```")
     await _tweets(msg, text, "myogiadityanath")
@@ -353,7 +353,7 @@ async def yogrishiramdev(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Ramdev Need some text to Write ð```", del_in=3)
+        await msg.err("```Ramdev Need some text to Write ð```")
         return
     await msg.edit("```Ramdev is writing for You ð```")
     await _tweets(msg, text, "yogrishiramdev")
@@ -370,7 +370,7 @@ async def sudhirchaudhary(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Sudhir Need some text to Write ð```", del_in=3)
+        await msg.err("```Sudhir Need some text to Write ð```")
         return
     await msg.edit("```Sudhir is writing for You ð```")
     await _tweets(msg, text, "sudhirchaudhary")
@@ -387,7 +387,7 @@ async def ArnabGoswamiRTV(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Arnab Need some text to Write ð```", del_in=3)
+        await msg.err("```Arnab Need some text to Write ð```")
         return
     await msg.edit("```Arnab is writing for You ð```")
     await _tweets(msg, text, "ArnabGoswamiRTV")
@@ -404,7 +404,7 @@ async def RahulGandhi(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Rahul Need some text to Write ð```", del_in=3)
+        await msg.err("```Rahul Need some text to Write ð```")
         return
     await msg.edit("```Rahul is writing for You ð```")
     await _tweets(msg, text, "RahulGandhi")
@@ -421,7 +421,7 @@ async def iamsrk(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Amit Shah Need some text to Write ð```", del_in=3)
+        await msg.err("```Amit Shah Need some text to Write ð```")
         return
     await msg.edit("```Amit Shah is writing for You ð```")
     await _tweets(msg, text, "AmitShah")
@@ -438,7 +438,7 @@ async def RubikaLiyaquat(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```rubika Need some text to Write ð```", del_in=3)
+        await msg.err("```rubika Need some text to Write ð```")
         return
     await msg.edit("```rubika is writing for You ð```")
     await _tweets(msg, text, "RubikaLiyaquat")
@@ -455,7 +455,7 @@ async def AMISHDEVGAN(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```Amish Need some text to Write ð```", del_in=3)
+        await msg.err("```Amish Need some text to Write ð```")
         return
     await msg.edit("```Amish is writing for You ð```")
     await _tweets(msg, text, "AMISHDEVGAN")
@@ -472,7 +472,7 @@ async def DChaurasia2312(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```deepak Need some text to Write ð```", del_in=3)
+        await msg.err("```deepak Need some text to Write ð```")
         return
     await msg.edit("```deepak is writing for You ð```")
     await _tweets(msg, text, "DChaurasia2312")
@@ -489,7 +489,7 @@ async def elonmusk(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```elonmusk Need some text to Write ð```", del_in=3)
+        await msg.err("```elonmusk Need some text to Write ð```")
         return
     await msg.edit("```deepak is writing for You ð```")
     await _tweets(msg, text, "elonmusk")
@@ -506,7 +506,7 @@ async def SpaceX(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```SpaceX Need some text to Write ð```", del_in=3)
+        await msg.err("```SpaceX Need some text to Write ð```")
         return
     await msg.edit("```deepak is writing for You ð```")
     await _tweets(msg, text, "SpaceX")
@@ -523,7 +523,7 @@ async def isro(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```isro Need some text to Write ð```", del_in=3)
+        await msg.err("```isro Need some text to Write ð```")
         return
     await msg.edit("```isro is writing for You ð```")
     await _tweets(msg, text, "isro")
@@ -540,7 +540,7 @@ async def gandhi(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```gandhi Need some text to Write ð```", del_in=3)
+        await msg.err("```gandhi Need some text to Write ð```")
         return
     await msg.edit("```gandhi is writing for You ð```")
     await _tweets(msg, text, "gandhi")
@@ -557,7 +557,7 @@ async def miakhalifa(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```miakhalifa Need some text to Write ð```", del_in=3)
+        await msg.err("```miakhalifa Need some text to Write ð```")
         return
     await msg.edit("```miakhalifa is writing for You ð```")
     await _tweets(msg, text, "miakhalifa")
@@ -574,7 +574,7 @@ async def JohnnnyyySins(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```johnny Need some text to Write ð```", del_in=3)
+        await msg.err("```johnny Need some text to Write ð```")
         return
     await msg.edit("```johnny is writing for You ð```")
     await _tweets(msg, text, "JohnnnyyySins")
@@ -591,7 +591,7 @@ async def kamaalrkhan(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```krk Need some text to Write ð```", del_in=3)
+        await msg.err("```krk Need some text to Write ð```")
         return
     await msg.edit("```krk is writing for You ð```")
     await _tweets(msg, text, "kamaalrkhan")
@@ -608,7 +608,7 @@ async def vivekoberoi(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```vivek Need some text to Write ð```", del_in=3)
+        await msg.err("```vivek Need some text to Write ð```")
         return
     await msg.edit("```vivek is writing for You ð```")
     await _tweets(msg, text, "vivekoberoi")
@@ -625,7 +625,7 @@ async def boringcompany(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```boringcompany Need some text to Write ð```", del_in=3)
+        await msg.err("```boringcompany Need some text to Write ð```")
         return
     await msg.edit("```boringcompany is writing for You ð```")
     await _tweets(msg, text, "boringcompany")
@@ -642,7 +642,7 @@ async def duttsanjay(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```sanjay Need some text to Write ð```", del_in=3)
+        await msg.err("```sanjay Need some text to Write ð```")
         return
     await msg.edit("```sanjay is writing for You ð```")
     await _tweets(msg, text, "duttsanjay")
@@ -659,7 +659,7 @@ async def ajaydevgn(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```ajay Need some text to Write ð```", del_in=3)
+        await msg.err("```ajay Need some text to Write ð```")
         return
     await msg.edit("```ajay is writing for You ð```")
     await _tweets(msg, text, "ajaydevgn")
@@ -676,7 +676,7 @@ async def tesla(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```tesla Need some text to Write ð```", del_in=3)
+        await msg.err("```tesla Need some text to Write ð```")
         return
     await msg.edit("```tesla is writing for You ð```")
     await _tweets(msg, text, "tesla")
@@ -693,7 +693,7 @@ async def AlbertEinstein(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```albert Need some text to Write ð```", del_in=3)
+        await msg.err("```albert Need some text to Write ð```")
         return
     await msg.edit("```albert is writing for You ð```")
     await _tweets(msg, text, "AlbertEinstein")
@@ -710,7 +710,7 @@ async def BearGrylls(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```BearGrylls Need some text to Write ð```", del_in=3)
+        await msg.err("```BearGrylls Need some text to Write ð```")
         return
     await msg.edit("```BearGrylls is writing for You ð```")
     await _tweets(msg, text, "BearGrylls")
@@ -727,7 +727,7 @@ async def rajinikanth(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```rajinikanth Need some text to Write ð```", del_in=3)
+        await msg.err("```rajinikanth Need some text to Write ð```")
         return
     await msg.edit("```rajinikanth is writing for You ð```")
     await _tweets(msg, text, "rajinikanth")
@@ -744,7 +744,7 @@ async def apple(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```apple Need some text to Write ð```", del_in=3)
+        await msg.err("```apple Need some text to Write ð```")
         return
     await msg.edit("```apple is writing for You ð```")
     await _tweets(msg, text, "apple")
@@ -761,7 +761,7 @@ async def durov(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```durov Need some text to Write ð```", del_in=3)
+        await msg.err("```durov Need some text to Write ð```")
         return
     await msg.edit("```durov is writing for You ð```")
     await _tweets(msg, text, "durov")
@@ -778,7 +778,7 @@ async def facebook(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```facebook Need some text to Write ð```", del_in=3)
+        await msg.err("```facebook Need some text to Write ð```")
         return
     await msg.edit("```facebook is writing for You ð```")
     await _tweets(msg, text, "facebook")
@@ -795,7 +795,7 @@ async def bjp4india(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```bjp Need some text to Write ð```", del_in=3)
+        await msg.err("```bjp Need some text to Write ð```")
         return
     await msg.edit("```bjp is writing for You ð```")
     await _tweets(msg, text, "bjp4india")
@@ -812,7 +812,7 @@ async def sambitswaraj(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```sambit Need some text to Write ð```", del_in=3)
+        await msg.err("```sambit Need some text to Write ð```")
         return
     await msg.edit("```sambit is writing for You ð```")
     await _tweets(msg, text, "sambitswaraj")
@@ -829,7 +829,7 @@ async def nsitharaman(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```nirmala Need some text to Write ð```", del_in=3)
+        await msg.err("```nirmala Need some text to Write ð```")
         return
     await msg.edit("```nirmala is writing for You ð```")
     await _tweets(msg, text, "nsitharaman")
@@ -846,7 +846,7 @@ async def youtube(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```youtube Need some text to Write ð```", del_in=3)
+        await msg.err("```youtube Need some text to Write ð```")
         return
     await msg.edit("```youtube is writing for You ð```")
     await _tweets(msg, text, "youtube")
@@ -863,7 +863,7 @@ async def tiktok_in(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```tiktok Need some text to Write ð```", del_in=3)
+        await msg.err("```tiktok Need some text to Write ð```")
         return
     await msg.edit("```tiktok is writing for You ð```")
     await _tweets(msg, text, "tiktok_in")
@@ -880,7 +880,7 @@ async def google(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```google Need some text to Write ð```", del_in=3)
+        await msg.err("```google Need some text to Write ð```")
         return
     await msg.edit("```google is writing for You ð```")
     await _tweets(msg, text, "google")
@@ -897,7 +897,7 @@ async def thekangana(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```kangana Need some text to Write ð```", del_in=3)
+        await msg.err("```kangana Need some text to Write ð```")
         return
     await msg.edit("```kangana is writing for You ð```")
     await _tweets(msg, text, "thekangana")
@@ -914,7 +914,7 @@ async def ihrithik(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```hrithik Need some text to Write ð```", del_in=3)
+        await msg.err("```hrithik Need some text to Write ð```")
         return
     await msg.edit("```hrithik is writing for You ð```")
     await _tweets(msg, text, "ihrithik")
@@ -931,7 +931,7 @@ async def nirmalbabaji(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```nirmalbabaji Need some text to Write ð```", del_in=3)
+        await msg.err("```nirmalbabaji Need some text to Write ð```")
         return
     await msg.edit("```nirmalbabaji is writing for You ð```")
     await _tweets(msg, text, "nirmalbabaji")
@@ -948,7 +948,7 @@ async def gurmeetHoneyS(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```ram rahim singh Need some text to Write ð```", del_in=3)
+        await msg.err("```ram rahim singh Need some text to Write ð```")
         return
     await msg.edit("```ram rahim singh is writing for You ð```")
     await _tweets(msg, text, "gurmeetHoneyS")
@@ -965,7 +965,7 @@ async def tim_cook(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```tim coom Need some text to Write ð```", del_in=3)
+        await msg.err("```tim coom Need some text to Write ð```")
         return
     await msg.edit("```tim cook is writing for You ð```")
     await _tweets(msg, text, "tim_cook")
@@ -982,7 +982,7 @@ async def stevejobsceo(msg: Message):
     if replied and not text:
         text = replied.text
     if not text:
-        await msg.err("```steve Need some text to Write ð```", del_in=3)
+        await msg.err("```steve Need some text to Write ð```")
         return
     await msg.edit("```steve is writing for You ð```")
     await _tweets(msg, text, "stevejobsceo")
