@@ -868,11 +868,11 @@ async def tiktok_in(msg: Message):
     await msg.edit("```tiktok is writing for You ð```")
     await _tweets(msg, text, "tiktok_in")
         
-@userge.on_cmd("google", about={
+@userge.on_cmd("googal", about={
     'header': "Custom text Sticker of google",
     'flags': {
         '-s': "To get tweet in Sticker"},
-    'usage': "{tr}google [text | reply to text]"})
+    'usage': "{tr}googal [text | reply to text]"})
 async def google(msg: Message):
     """ Fun Sticker of google Tweet """
     replied = msg.reply_to_message
