@@ -3,7 +3,7 @@ python:
   - "3.8"
 before_install:
   - cd ..
-  - git clone --depth=1 --branch=alpha https://github.com/UsergeTeam/Userge.git Userge
+  - git clone --depth=1 --branch=alpha https://github.com/ravana69/Userge.git Userge
   - mv Userge-Plugins/plugins/ Userge/userge/plugins/unof_plugins/
   - cp -r Userge-Plugins/resources/* Userge/resources/
 install:
@@ -14,4 +14,4 @@ before_script:
   - cd Userge
   - mkdir -p logs
 script:
-  - python test.py
+  - python -m tests
