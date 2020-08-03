@@ -60,7 +60,7 @@ async def kang_(message: Message):
     if photo:
         args = message.input_str.split()
         if not emoji:
-            emoji = "ð¤"
+            emoji = "🤫"
         pack = 1
         if len(args) == 2:
             emoji, pack = args
