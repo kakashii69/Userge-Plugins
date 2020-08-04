@@ -1004,7 +1004,228 @@ async def starbucks(msg: Message):
     await msg.edit("```starbucks is writing for You ð```")
     await _tweets(msg, text, "starbucks")
     
-@userge.on_cmd("android", about={
+@userge.on_cmd("netflix", about={
+    'header': "Custom text Sticker of netflix",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}netflix [text | reply to text]"})
+async def netflix(msg: Message):
+    """ Fun Sticker of netflix Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```netflix Need some text to Write ð```")
+        return
+    await msg.edit("```netflix is writing for You ð```")
+    await _tweets(msg, text, "netflix")
+    
+@userge.on_cmd("prime", about={
+    'header': "Custom text Sticker of PrimeVideo",
+    'flags': {
+        '-s': "To get tweet in PrimeVideo"},
+    'usage': "{tr}prime [text | reply to text]"})
+async def PrimeVideo(msg: Message):
+    """ Fun Sticker of PrimeVideo Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```PrimeVideo Need some text to Write ð```")
+        return
+    await msg.edit("```PrimeVideo is writing for You ð```")
+    await _tweets(msg, text, "PrimeVideo")
+    
+@userge.on_cmd("altbalaji", about={
+    'header': "Custom text Sticker of altbalaji",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}altbalaji [text | reply to text]"})
+async def altbalaji(msg: Message):
+    """ Fun Sticker of altbalaji Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```altbalaji Need some text to Write ð```")
+        return
+    await msg.edit("```altbalaji is writing for You ð```")
+    await _tweets(msg, text, "altbalaji")
+    
+@userge.on_cmd("general", about={
+    'header': "Custom text Sticker of GeneralBakshi",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}general [text | reply to text]"})
+async def GeneralBakshi(msg: Message):
+    """ Fun Sticker of GeneralBakshi Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```GeneralBakshi Need some text to Write ð```")
+        return
+    await msg.edit("```GeneralBakshi is writing for You ð```")
+    await _tweets(msg, text, "GeneralBakshi")
+    
+@userge.on_cmd("mdh", about={
+    'header': "Custom text Sticker of Mdhmasalauncle",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}mdh [text | reply to text]"})
+async def Mdhmasalauncle(msg: Message):
+    """ Fun Sticker of Mdhmasalauncle Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```Mdhmasalauncle Need some text to Write ð```")
+        return
+    await msg.edit("```Mdhmasalauncle is writing for You ð```")
+    await _tweets(msg, text, "Mdhmasalauncle")
+    
+@userge.on_cmd("setu", about={
+    'header': "Custom text Sticker of Arogyasetu",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}setu [text | reply to text]"})
+async def Arogyasetu(msg: Message):
+    """ Fun Sticker of Arogyasetu Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```Arogyasetu Need some text to Write ð```")
+        return
+    await msg.edit("```Arogyasetu is writing for You ð```")
+    await _tweets(msg, text, "Arogyasetu")
+    
+@userge.on_cmd("pornhub", about={
+    'header': "Custom text Sticker of pornhub",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}pornhub [text | reply to text]"})
+async def pornhub(msg: Message):
+    """ Fun Sticker of pornhub Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```pornhub Need some text to Write ð```")
+        return
+    await msg.edit("```pornhub is writing for You ð```")
+    await _tweets(msg, text, "pornhub")
+    
+@userge.on_cmd("davood", about={
+    'header': "Custom text Sticker of Davood_Official",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}davood [text | reply to text]"})
+async def Davood_Official(msg: Message):
+    """ Fun Sticker of Davood_Official Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```Davood_Official Need some text to Write ð```")
+        return
+    await msg.edit("```Davood_Official is writing for You ð```")
+    await _tweets(msg, text, "Davood_Official")
+    
+@userge.on_cmd("osama", about={
+    'header': "Custom text Sticker of ItstherealOsama",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}osama [text | reply to text]"})
+async def ItstherealOsama(msg: Message):
+    """ Fun Sticker of ItstherealOsama Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```ItstherealOsama Need some text to Write ð```")
+        return
+    await msg.edit("```ItstherealOsama is writing for You ð```")
+    await _tweets(msg, text, "ItstherealOsama")
+    
+@userge.on_cmd("kim", about={
+    'header': "Custom text Sticker of Real_kimjonguno",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}kim [text | reply to text]"})
+async def Real_kimjonguno(msg: Message):
+    """ Fun Sticker of Real_kimjonguno Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```Real_kimjonguno Need some text to Write ð```")
+        return
+    await msg.edit("```Real_kimjonguno is writing for You ð```")
+    await _tweets(msg, text, "Real_kimjonguno")
+    
+@userge.on_cmd("imran", about={
+    'header': "Custom text Sticker of ImranKhanPTI",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}imran [text | reply to text]"})
+async def ImranKhanPTI(msg: Message):
+    """ Fun Sticker of ImranKhanPTI Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```ImranKhanPTI Need some text to Write ð```")
+        return
+    await msg.edit("```ImranKhanPTI is writing for You ð```")
+    await _tweets(msg, text, "ImranKhanPTI")
+    
+@userge.on_cmd("emraan", about={
+    'header': "Custom text Sticker of emraanhashmi",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}emraan [text | reply to text]"})
+async def emraanhashmi(msg: Message):
+    """ Fun Sticker of emraanhashmi Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```emraanhashmi Need some text to Write ð```")
+        return
+    await msg.edit("```emraanhashmi is writing for You ð```")
+    await _tweets(msg, text, "emraanhashmi")
+    
+@userge.on_cmd("vijay", about={
+    'header': "Custom text Sticker of TheVijayMallya",
+    'flags': {
+        '-s': "To get tweet in Sticker"},
+    'usage': "{tr}vijay [text | reply to text]"})
+async def TheVijayMallya(msg: Message):
+    """ Fun Sticker of TheVijayMallya Tweet """
+    replied = msg.reply_to_message
+    text = msg.filtered_input_str
+    if replied and not text:
+        text = replied.text
+    if not text:
+        await msg.err("```TheVijayMallya Need some text to Write ð```")
+        return
+    await msg.edit("```TheVijayMallya is writing for You ð```")
+    await _tweets(msg, text, "TheVijayMallya")
+                  
+    @userge.on_cmd("android", about={
     'header': "Custom text Sticker of Android jobs",
     'flags': {
         '-s': "To get tweet in Sticker"},
