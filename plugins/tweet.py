@@ -1225,7 +1225,7 @@ async def TheVijayMallya(msg: Message):
     await msg.edit("```TheVijayMallya is writing for You ð```")
     await _tweets(msg, text, "TheVijayMallya")
                   
-    @userge.on_cmd("android", about={
+@userge.on_cmd("android", about={
     'header': "Custom text Sticker of Android jobs",
     'flags': {
         '-s': "To get tweet in Sticker"},
