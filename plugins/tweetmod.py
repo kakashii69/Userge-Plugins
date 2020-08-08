@@ -187,7 +187,7 @@ async def _tweets(msg: Message, text: str, username: str = '', type_: str = "twe
         '-s': "To get tweet in Sticker"},
     'usage': "{tr}clb [short_name | text or reply to text]",
     'Fonts': "<code>Check this</code> "
-    "<a href='https://telegra.ph/Famous-Twitter-Handles-08-08'><b>short_name</b></a>"
+    "<a href='https://telegra.ph/Famous-Twitter-Handles-08-07'><b>short_name</b></a>"
     " <code>to know available twitter accounts</code>"})
     
 async def celeb_(msg: Message):
