@@ -268,31 +268,32 @@ async def celeb_(message: Message):
         "zee" : "ZeeNews"
     }
 
-    replied = message.reply_to_message
+    replied = msg.reply_to_message
+    texxt = msg.filtered_input_str
     if replied:
-        if "," in message.input_str:
-            celeb_name, msg_text = message.input_str.split(',')
+        if "|" in texxt:
+            celeb_name, msg_text = texxt.split('|')
             celeb_name = celeb_name.strip()
             comment = msg_text or replied.text
         else:
-            celeb_name = message.input_str
+            celeb_name = texxt
             comment = replied.text
         if not celeb_name and comment:
-            await message.err("```Input not found! Give celeb name and text, See Help for more!...```", del_in=3)
+            await msg.err("```Input not found! Give celeb name and text, See Help for more!...```", del_in=3)
             return
     else:
-        if "," in message.input_str:
-                celeb_name, msg_text = message.input_str.split(',')
+        if "|" in texxt:
+                celeb_name, msg_text = texxt.split('|')
                 celeb_name = celeb_name.strip()
                 comment = msg_text
         else:
-            await message.err("```Input not found! See Help...```", del_in=3)
+            await msg.err("```Input not found! See Help...```", del_in=3)
             return
     celebrity = CELEBS[celeb_name]
     if not celebrity:
-       await message.err("```Not A Valid Celeb Name```", del_in=3)
+       await msg.err("```Not A Valid Celeb Name```", del_in=3)
        return 
-    await message.edit(f"```{celeb_name} is writing for You 😀```")
-    await _tweets(message, comment, celebrity)
+    await msg.edit(f"```{celeb_name} is writing for You 😀```")
+    await _tweets(msg, comment, celebrity)
 
     
