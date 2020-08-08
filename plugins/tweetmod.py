@@ -1,6 +1,7 @@
 """ Fun Stickers for Tweet """
 
 # By @Krishna_Singhal
+# Improved by code-rgb
 
 import os
 import re
@@ -9,28 +10,10 @@ import requests
 from PIL import Image
 from validators.url import url
 
-from userge import userge, Config, Message
+from userge import userge, Config, Message, deEmojify
 
 CONVERTED_IMG = Config.DOWN_PATH + "img.png"
 CONVERTED_STIKR = Config.DOWN_PATH + "sticker.webp"
-
-EMOJI_PATTERN = re.compile(
-    "["
-    "\U0001F1E0-\U0001F1FF"  # flags (iOS)
-    "\U0001F300-\U0001F5FF"  # symbols & pictographs
-    "\U0001F600-\U0001F64F"  # emoticons
-    "\U0001F680-\U0001F6FF"  # transport & map symbols
-    "\U0001F700-\U0001F77F"  # alchemical symbols
-    "\U0001F780-\U0001F7FF"  # Geometric Shapes Extended
-    "\U0001F800-\U0001F8FF"  # Supplemental Arrows-C
-    "\U0001F900-\U0001F9FF"  # Supplemental Symbols and Pictographs
-    "\U0001FA00-\U0001FA6F"  # Chess Symbols
-    "\U0001FA70-\U0001FAFF"  # Symbols and Pictographs Extended-A
-    "\U00002702-\U000027B0"  # Dingbats
-    "]+")
-def deEmojify(inputString: str) -> str:
-    """Remove emojis and other non-safe characters from string"""
-    return re.sub(EMOJI_PATTERN, '', inputString)
 
 @userge.on_cmd("trump", about={
     'header': "Custom Sticker of Trump Tweet",
@@ -186,11 +169,11 @@ async def _tweets(msg: Message, text: str, username: str = '', type_: str = "twe
         '-s': "To get tweet in Sticker"},
     'usage': "{tr}clb [short_name | text or reply to text]",
     'Fonts': "<code>Check this</code> "
-    "<a href='https://telegra.ph/Famous-Twitter-Handles-08-07'>short_name</a>"
-    " <code>to know Famous Twitter Handles</code>"})
+    "<a href='https://telegra.ph/Famous-Twitter-Handles-08-08'><b>short_name</b></a>"
+    " <code>to know available twitter accounts</code>"})
     
-async def celeb_(message: Message):
-    """ Fun Sticker Celeb Tweet """
+async def celeb_(msg: Message):
+    """ Fun Famous Twitter Tweets """
 
     CELEBS = {
         "salmon": "BeingSalmanKhan",
