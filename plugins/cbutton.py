@@ -2,12 +2,11 @@
 
 # By @Krishna_Singhal
 
-from pyrogram import InlineKeyboardMarkup as keyboard
 from pyrogram.errors.exceptions.bad_request_400 import (
     UserIsBot, BadRequest, MessageEmpty)
 
 from userge import userge, Config, Message
-from userge.core.types.new.channel_logger import _parse_buttons as pb
+from userge.utils import parse_buttons as pb
 
 
 @userge.on_cmd("cbutton", about={
@@ -30,20 +29,16 @@ async def create_button(msg: Message):
     text, buttons = pb(replied.text)
     try:
         await userge.bot.send_message(
-            msg.chat.id, text=text,
+            chat_id=msg.chat.id, text=text,
             reply_to_message_id=replied.message_id,
-            reply_markup=keyboard(buttons))
+            reply_markup=buttons)
     except UserIsBot:
-        await msg.err(
-            "oops, your Bot is not here to send Msg!")
+        await msg.err("oops, your Bot is not here to send Msg!")
     except BadRequest:
-        await msg.err(
-            "Check Syntax of Your Message for making buttons!")
+        await msg.err("Check Syntax of Your Message for making buttons!")
     except MessageEmpty:
-        await msg.err(
-            "Message Object is Empty!")
+        await msg.err("Message Object is Empty!")
     except Exception as error:
-        await msg.edit(
-            f"`Something went Wrong! 😁`\n\n**ERROR:** `{error}`")
+        await msg.edit(f"`Something went Wrong! 😁`\n\n**ERROR:** `{error}`")
     else:
         await msg.delete()
