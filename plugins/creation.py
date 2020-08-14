@@ -34,17 +34,6 @@ async def creation_(message: Message):
     except StopConversation:
         pass
     message = "Message"
-    message = "Message"
     for msg in msgs:
-        if '-u' in message.flags:
-            if msg.text.startswith("No records found"):
-                await message.edit("```User is alien...```", del_in=5)
-                return
             if msg.text.startswith(message):
-                await message.edit(f"`{msg.text}`")
-        else:
-            if msg.text.startswith("No records found"):
-                await message.edit("```User is alien...```", del_in=5)
-                return
-            if msg.text.startswith(message):
-                await message.edit(f"`{msg.text}`")
+               await message.edit(f"`{msg.text}`")
