@@ -260,6 +260,7 @@ async def celeb_(msg: Message):
         "whatsapp": "WhatsApp",
         "ananya": "ananyapandayy",
         "sonakshi": "Aslisonagold",
+        "heroku": "heroku",
         "sonam": "sonamakapoor",
         "johar": "karanjohar",
         "yogi": "myogiadityanath",
