@@ -41,7 +41,7 @@ async def ghost_invert(message: Message):
             raise Exception(stdout + stderr)
         ghost_file = file_1
     elif replied.sticker and replied.sticker.file_name.endswith(".webp"):
-        await message.edit("```Ghost coming from this gay sticker```")
+        await message.edit("```Ghost coming from this cursed sticker```")
         file_2 = os.path.join(Config.DOWN_PATH, "ghost.png")
         os.rename(dls_loc, file_2)
         if not os.path.lexists(file_2):
@@ -50,9 +50,9 @@ async def ghost_invert(message: Message):
         ghost_file = file_2
     elif replied.animation or replied.video:
         if replied.animation:
-            await message.edit("```Ghost coming from this gay GIF```")
+            await message.edit("```Ghost coming from this cursed GIF```")
         else:
-            await message.edit("```Ghost coming from this gay video```")
+            await message.edit("```Ghost coming from this cursed video```")
         file_3 = os.path.join(Config.DOWN_PATH, "ghost.jpg")
         await take_screen_shot(dls_loc, 0, file_3)
         if not os.path.lexists(file_3):
