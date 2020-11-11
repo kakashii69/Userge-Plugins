@@ -5,7 +5,7 @@ import asyncio
 from userge import userge
 
 
-@userge.on_cmd("mod$", about={'header': "`.term names`, `.term dadjoke --reddit`, `.term pytuneteller pisces --today`, `.term jotquote`, `.term csvfaker -r 10 first_name last_name job`, `.term kwot 5`, `.term programmingquotes -l EN` "})
+@userge.on_cmd("mod$", about={'header': "'.term names', '.term dadjoke --reddit', '.term pytuneteller pisces --today', '.term jotquote', '.term csvfaker -r 10 first_name last_name job', '.term kwot 5', '.term programmingquotes -l EN' "})
 async def kill_func(message):
     animation_chars = [
         "P",
