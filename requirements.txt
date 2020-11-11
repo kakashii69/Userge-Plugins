@@ -14,12 +14,3 @@ qrcode
 spotdl
 tracemoepy
 validators
-names
-random_cli
-pytuneteller
-dadjokes-cli
-jotquote
-csvfaker
-kwot
-programmingquotes
-passwordgenerator
